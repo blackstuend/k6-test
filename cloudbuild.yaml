@@ -1,0 +1,4 @@
+steps:
+# Load Test
+- name: 'loadimpact/k6'
+  args: ['run','index.js']
