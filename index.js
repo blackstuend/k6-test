@@ -1,7 +1,6 @@
 import http from 'k6/http';
 import { sleep } from 'k6';
-import dotenv from 'dotenv'
-dotenv.config({ path: path.join(__dirname, '.env') })
+import 'dotenv/config.js';
 
 const HELLO = process.env.HELLO
 console.log(HELLO)
