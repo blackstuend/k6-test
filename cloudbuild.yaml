@@ -1,12 +1,6 @@
 steps:
-- name: node:16
-  entrypoint: npm
-  args: ["install"]
-- name: node:16
-  entrypoint: npm
-  args: ["run", "create-env"]
-  env:
-    - 'HELLO=${_HELLO}'
 # Load Test
 - name: 'loadimpact/k6'
-  args: ['run','index.js']
+  args: ['run', '-e', 'HELLO=$HELLO' ,'index.js']
+  env:
+    - 'HELLO=${_HELLO}'
