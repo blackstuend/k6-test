@@ -1,6 +1,6 @@
 steps:
 # Load Test
 - name: 'loadimpact/k6'
-  args: ['run', '-e', 'HELLO=$HELLO' ,'index.js']
+  args: ['run','index.js']
   env:
     - 'HELLO=${_HELLO}'
