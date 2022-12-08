@@ -1,6 +1,6 @@
 import http from 'k6/http';
 import { sleep } from 'k6';
-import { HELLO } from '../config';
+import { HELLO } from './config';
 
 console.log(HELLO)
 export default function () {
